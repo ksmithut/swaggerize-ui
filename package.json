@@ -1,0 +1,49 @@
+{
+  "name": "swaggerize-ui",
+  "version": "0.0.1",
+  "description": "Express middleware to display a swagger-ui page",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "jshint": "jshint --reporter node_modules/jshint-stylish/stylish.js index.js",
+    "check-cov": "istanbul check-coverage --statements 100 --functions 100 --branches 100 --lines 100",
+    "test": "istanbul cover _mocha",
+    "posttest": " npm run check-cov; npm run jshint;",
+    "codeclimate": "cat ./coverage/lcov.info | codeclimate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksmithut/swaggerize-ui.git"
+  },
+  "keywords": [
+    "swagger-ui",
+    "swaggerize",
+    "express",
+    "middleware"
+  ],
+  "author": "ksmithut",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ksmithut/swaggerize-ui/issues"
+  },
+  "homepage": "https://github.com/ksmithut/swaggerize-ui#readme",
+  "dependencies": {
+    "express": "^4.12.4",
+    "object-assign": "^2.0.0",
+    "swagger-ui": "^2.1.5-M2"
+  },
+  "devDependencies": {
+    "bluebird": "^2.9.25",
+    "chai": "^2.3.0",
+    "codeclimate-test-reporter": "0.0.4",
+    "istanbul": "^0.3.14",
+    "jshint": "^2.7.0",
+    "jshint-stylish": "^1.0.2",
+    "mocha": "^2.2.5",
+    "mocha-lcov-reporter": "0.0.2",
+    "supertest": "^1.0.1",
+    "supertest-as-promised": "^2.0.1"
+  }
+}
