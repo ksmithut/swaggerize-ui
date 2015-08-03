@@ -14,7 +14,7 @@ describe('swaggerize-ui', function () {
 
   it('should redirect docs with url query', function () {
     return request.get('/docs')
-      .expect(302)
+      .expect(301)
       .then(function (res) {
         expect(res.headers.location).to.be.equal('?url=%2Fapi-docs');
         return request.get('/api-doc').expect(200);

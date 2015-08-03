@@ -18,7 +18,7 @@ module.exports = function swaggerUi(options) {
     if (!req.query.url) {
       var query = req.query;
       query.url = options.docs;
-      return res.redirect(url.format({query: query}));
+      return res.redirect(301, url.format({query: query}));
     }
     next();
   });
